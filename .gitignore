@@ -1,0 +1,33 @@
+# Ignorar las carpetas bin y obj generadas por la compilación
+/bin/
+/obj/
+
+# Archivos de configuración específicos del IDE
+.vs/
+.idea/
+.vscode/
+
+# Archivos temporales de Visual Studio y Rider
+# Los archivos de usuario pueden contener configuraciones locales que no necesitan ser compartidas
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignorar archivos generados por la compilación
+*.exe
+*.dll
+*.pdb
+*.app
+*.apk
+*.ipa
+
+# Ignorar archivos de log
+*.log
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales del sistema de archivos
+*~
