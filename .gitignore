@@ -1,6 +1,6 @@
 # Ignorar las carpetas bin y obj generadas por la compilación
-/bin/
-/obj/
+**/bin/
+**/obj/
 
 # Archivos de configuración específicos del IDE
 .vs/
