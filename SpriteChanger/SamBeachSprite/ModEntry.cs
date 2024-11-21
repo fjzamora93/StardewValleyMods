@@ -27,7 +27,7 @@ namespace SamBeachSprite
             };
 
             helper.Events.Player.Warped += OnPlayerWarped;
-            helper.Events.GameLoop.TimeChanged += OnTimeChanged;
+            //helper.Events.GameLoop.TimeChanged += OnTimeChanged;
         }
 
         private void OnPlayerWarped(object sender, WarpedEventArgs e)
@@ -49,35 +49,35 @@ namespace SamBeachSprite
        
         }
 
-        private void OnTimeChanged(object sender, EventArgs e)
-        {
-            Monitor.Log($"La hora ha cambiado");
-            if (Game1.timeOfDay == 2200)
-            {
-                Monitor.Log($"Son las 8 de la mañana... ahora debería moverse Alex");
-                MoveAlexToNewMap();
-            }
-        }
+        //private void OnTimeChanged(object sender, EventArgs e)
+        //{
+        //    Monitor.Log($"La hora ha cambiado");
+        //    if (Game1.timeOfDay == 2200)
+        //    {
+        //        Monitor.Log($"Son las 8 de la mañana... ahora debería moverse Alex");
+        //        MoveAlexToNewMap();
+        //    }
+        //}
 
-        private void MoveAlexToNewMap()
-        {
+        //private void MoveAlexToNewMap()
+        //{
          
-            NPC alex = Game1.getCharacterFromName("Alex");
-            Monitor.Log($"Desplazando a Alex a las coordenadas 35,10");
-            if (alex != null)
-            {
-                //Game1.warpFarmer("FarmHouse", 34, 28, 0); // Mueve al jugador a las vías del tren (aquí tienes que colocar las coordenadas y nombre correctos del mapa)
+        //    NPC alex = Game1.getCharacterFromName("Alex");
+        //    Monitor.Log($"Desplazando a Alex a las coordenadas 35,10");
+        //    if (alex != null)
+        //    {
+        //        //Game1.warpFarmer("FarmHouse", 34, 28, 0); // Mueve al jugador a las vías del tren (aquí tienes que colocar las coordenadas y nombre correctos del mapa)
 
-                alex.xVelocity = 0;
-                alex.yVelocity = 0;
-                alex.movementPause = 5000;
+        //        alex.xVelocity = 0;
+        //        alex.yVelocity = 0;
+        //        alex.movementPause = 5000;
 
              
 
-                // Ahora movemos a Alex al nuevo mapa (las coordenadas pueden ser ajustadas)
-                Game1.warpCharacter(alex, "FarmHouse", new Point(30, 25)); // Aquí indicamos las coordenadas para Alex en el nuevo mapa
+        //        // Ahora movemos a Alex al nuevo mapa (las coordenadas pueden ser ajustadas)
+        //        Game1.warpCharacter(alex, "FarmHouse", new Point(30, 25)); // Aquí indicamos las coordenadas para Alex en el nuevo mapa
                 
-            }
-        }
+        //    }
+        //}
     }
 }

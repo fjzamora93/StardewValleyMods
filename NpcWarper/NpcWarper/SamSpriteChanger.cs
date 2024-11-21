@@ -8,14 +8,14 @@ using StardewValley.Objects;
 using xTile;
 using System.Collections.Generic;
 
-namespace SamBeachSprite
+namespace NpcWarper
 {
     
 
     public class SamSpriteChanger : CharacterSpriteChanger
     {
         public SamSpriteChanger(IModHelper helper, IMonitor monitor)
-            : base("Sam", new List<string> { "Beach", "SamHouse", "FarmHouse" }, helper, monitor) { }
+            : base("Sam", new List<string> { "Beach", "SamHouse" }, helper, monitor) { }
 
         protected override string GetSpritePath(string locationName)
         {

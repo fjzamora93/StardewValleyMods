@@ -14,7 +14,7 @@ namespace SamBeachSprite
     public class AlexSpriteChanger : CharacterSpriteChanger
     {
         public AlexSpriteChanger(IModHelper helper, IMonitor monitor)
-            : base("Alex", new List<string> { "Beach", "JoshHouse" }, helper, monitor) { }
+            : base("Alex", new List<string> { "Beach", "JoshHouse", "FarmHouse" }, helper, monitor) { }
 
         protected override string GetSpritePath(string locationName)
         {
@@ -23,7 +23,8 @@ namespace SamBeachSprite
 
         protected override string GetOriginalSpritePath()
         {
-            return $"assets/{npcName}/{npcName}_Summer.png";
+            
+            return $"assets/{npcName}/{npcName}_{currentSeason}.png";
         }
 
         protected override string GetSpritePathPortrait(string locationName)

@@ -3,19 +3,18 @@ using StardewModdingAPI;
 using StardewValley;
 using StardewModdingAPI.Events;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework;
 using StardewValley.Objects;
 using xTile;
 using System.Collections.Generic;
 
-namespace SamBeachSprite
+namespace NpcWarper
 {
-    
+   
 
-    public class SamSpriteChanger : CharacterSpriteChanger
+    public class AlexSpriteChanger : CharacterSpriteChanger
     {
-        public SamSpriteChanger(IModHelper helper, IMonitor monitor)
-            : base("Sam", new List<string> { "Beach", "SamHouse", "FarmHouse" }, helper, monitor) { }
+        public AlexSpriteChanger(IModHelper helper, IMonitor monitor)
+            : base("Alex", new List<string> { "Beach", "JoshHouse" }, helper, monitor) { }
 
         protected override string GetSpritePath(string locationName)
         {
@@ -24,7 +23,7 @@ namespace SamBeachSprite
 
         protected override string GetOriginalSpritePath()
         {
-            return $"assets/{npcName}/{npcName}_{currentSeason}.png";
+            return $"assets/{npcName}/{npcName}_Summer.png";
         }
 
         protected override string GetSpritePathPortrait(string locationName)
@@ -36,9 +35,5 @@ namespace SamBeachSprite
         {
             return $"assets/{npcName}/portrait/{npcName}_{currentSeason}.png";
         }
-
-
-       
-
     }
 }
